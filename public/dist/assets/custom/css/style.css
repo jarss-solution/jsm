@@ -1,0 +1,539 @@
+ul.source {
+	min-height: 50px !important;
+	padding: 2px;
+	list-style-type: none;
+	list-style-position: inside;
+	height: 55vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.ui-sortable-placeholder {
+	height: 32px !important;
+}
+ul.source {
+	margin: 0;
+	border-color: #f8e0b1;
+}
+.source li, .target li {
+	cursor: pointer;
+	margin: 5px;
+	padding: 5px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.source li {
+	background-color: #fcf8e3;
+	border: 1px solid #fbeed5;
+	color: #c09853;
+}
+.sortable-dragging {
+	border-color: #ccc !important;
+	background-color: #fafafa !important;
+	color: #bbb !important;
+}
+.sortable-placeholder {
+	height: 40px;
+}
+.source .sortable-placeholder {
+	border: 2px dashed #f8e0b1 !important;
+	background-color: #fefcf5 !important;
+}
+.target .sortable-placeholder {
+	border: 2px dashed #add38d !important;
+	background-color: #fefcf5 !important;
+}
+
+.sideBySide .card-body {
+	padding: 0;
+}
+
+.timelog-cat {
+	padding-left: 5px;
+	padding-right: 5px;
+	width: 350px;
+}
+
+.timelog-cat .card {
+	margin-bottom: 10px;
+}
+
+.add-issue-btn {
+	width: 100%;
+	border-radius: 0;
+}
+
+span.task-buttons {
+	float: right;
+}
+
+span.task-buttons button {
+	margin-left: 3px;
+	background: #323237;
+	color: white;
+	border: none;
+	width: 30px;
+	height: 30px;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.task-card .card-header {
+	background: #323237;
+	padding: 7px 10px 7px 20px;
+	line-height: 34px;
+	color: #ffffff;
+}
+
+.task-card .list-group-item {
+	padding: 7px;
+	padding-left: 20px;
+}
+
+.task-card .list-group-item .task-name {
+	line-height: 30px;
+}
+
+.task-card .task-assigned-by-user {
+	width: 30px;
+	height: 30px;
+}
+
+.task-card .task-assigned-to-user {
+	width: 30px;
+	height: 30px;
+	margin-right: 5px;
+}
+
+.task-destroy-btn:hover {
+	background: #F55753;
+}
+
+/* The container */
+.task-card .checkbox-container {
+	display: inline-block;
+	top: -8px;
+	position: relative;
+	padding-left: 28px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.task-card .checkbox-container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+/* Create a custom checkbox */
+.task-card .checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 22px;
+	width: 22px;
+	border: 1px solid #323237;
+}
+
+/* On mouse-over, add a grey background color */
+.task-card .checkbox-container:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.task-card .checkbox-container input:checked ~ .checkmark {
+	background-color: #323237;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.task-card .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the checkmark when checked */
+.task-card .checkbox-container input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the checkmark/indicator */
+.task-card .checkbox-container .checkmark:after {
+	left: 8px;
+	top: 4px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+li.list-group-item .task-status-color {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #FFF;
+	height: 100%;
+	line-height: 50px;
+	padding: 0 0 0 10px;
+	text-align: center;
+	z-index: 9;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 10px;
+	background: #ccc;
+	transition: all 0.4s ease-in-out;
+}
+
+li.list-group-item .task-status-color:hover {
+    width: 50%;
+}
+
+li.list-group-item .task-status-now {
+    background: #F55753;
+}
+
+li.list-group-item .task-status-need {
+    background: #6D5CAE;
+}
+
+li.list-group-item .task-status-free {
+    background: #48B0F7;
+}
+
+li.list-group-item .task-status-rockstar {
+    background: #10CFBD;
+}
+
+.task-card .task-card-body {
+    height: 350px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.task-card .task-card-body::-webkit-scrollbar {
+    width: 6px;
+    background-color: #eee;
+}
+.task-card .task-card-body::-webkit-scrollbar-thumb {
+    background-color: #323237;
+}
+
+.task-card button.add-task-btn {
+    float: right;
+    background: white;
+    border: none;
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.btn-black {
+    background: #323237;
+    border-color: #323237;
+}
+
+.btn-black:hover {
+    background: #F55753;
+    border-color: #F55753;
+}
+
+.task-assigned-by-and-destroy-btn {
+    display: inline-block;
+    /*border-left: 2px solid #323237;*/
+    padding-left: 5px;
+}
+
+.table-responsive {
+	padding: 20px 10px;
+}
+
+select[name="DataTables_Table_0_length"] {
+	background: #ffffff;
+}
+
+.dataTables_wrapper .dataTables_info {
+	padding-left: 0;
+}
+
+.task-delete-form {
+	float: left;
+}
+
+.btn-kazi {
+	background: #323237;
+	color: #fff;
+}
+.modal.fade:not(.show) {
+    opacity: 0 !important;
+}
+
+.chosen-container {
+	width: 100% !important;
+}
+
+.chosen-container-multi .chosen-choices {
+	border: 1px solid #ededed !important;
+	background-image: none !important;
+}
+
+.kms-navigation .page-link {
+	color: black;
+}
+
+.kms-navigation .page-item.active .page-link {
+	background-color: #41bb99;
+    border-color: #41bb99;
+}
+
+.text-grey {
+	color: #c7c7c7;
+}
+
+span.bubble.notification-count {
+    font-size: 9px;
+    text-align: center;
+}
+
+.text-task-assignee {
+	font-size: 10px;
+	color: #909090;
+}
+.notification-panel .notification-body .notification-item {
+    margin-left: 10px;
+}
+
+.notification-item .heading {
+	padding-top: 10px;
+}
+
+.notification-panel .notification-body .notification-item .heading {
+	line-height: 22px;
+}
+
+.notification-item .heading .time {
+	color: #666;
+}
+
+@media only screen and (min-width: 768px) {
+	form .row [class*='col-']:first-child {
+	     padding-left: auto; 
+	}
+
+	form .row [class*='col-']:last-child {
+	    padding-right: auto;
+	}
+
+	form .row [class*='col-']:not(:first-child), form .row [class*='col-']:not(:last-child) {
+	     padding-right: 5px; 
+	     padding-left: 5px; 
+	}
+
+	.no-padding-right {
+		padding-right: 0 !important;
+	}
+	.no-padding-left {
+		padding-left: 0 !important;
+	}
+}
+
+.download-icon {
+	margin-left: 8px;
+    font-size: 12px;
+    color: #323237;
+}
+
+.notification-item .heading {
+	padding-bottom: 8px;
+}
+
+.notification-panel .notification-body .notification-item .option .mark:before {
+	content: ' \2713';
+    font-size: 20px;
+}
+
+.project-card-header {
+	padding: 10px 20px 0 20px !important;
+	min-height: auto !important;
+}
+
+.project-card-hr {
+	margin-top: 5px;
+	margin-bottom: 14px;
+	border-color: #e1e1e16e;
+}
+
+.products-listing-header {
+	display: inline-block;
+}
+
+.products-listing-filtering {
+	margin-top: 12px;
+    display: inline-block;
+    float: right;
+}
+
+.products-listing-filtering a.active {
+	text-decoration: underline;
+}
+
+.project-processlist-group {
+	height: 433px;
+	overflow: hidden;
+	overflow-y: scroll;
+	/*border: 1px solid #a9a9a9;*/
+	border: 1px solid rgba(0,0,0,.125);
+    padding: 0px 10px;
+}
+
+.project-processlist-group::-webkit-scrollbar {
+    width: 6px;
+    background-color: #eee;
+}
+.project-processlist-group::-webkit-scrollbar-thumb {
+    background-color: #a9a9a9;
+}
+
+.checkbox.check-black input[type=checkbox]:checked + label:before {
+	border-color: #323237;
+}
+
+.note-editor, .note-editor .note-toolbar {
+	border-color: rgba(0,0,0,.125) !important;
+}
+
+.oneliner {
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.sideBySideProject {
+	width: max-content;
+}
+
+.sideBySideWrapper {
+	width: auto;
+	overflow: hidden;
+	overflow-x: scroll;
+	margin-bottom: 10px;
+}
+
+.sideBySideWrapper::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #eee;
+}
+.sideBySideWrapper::-webkit-scrollbar-thumb {
+    background-color: #a9a9a9;
+}
+
+.clickable-row {
+	cursor: pointer;
+}
+
+.ms-options ul {
+	list-style-type: none;
+	padding-left: 5px;
+}
+
+.ms-options-wrap > .ms-options > ul input[type="checkbox"] {
+	top: 11px !important;
+}
+
+.ms-options-wrap > button:focus, .ms-options-wrap > button {
+	border: 1px solid rgba(0, 0, 0, 0.07) !important;
+	padding: 8px 29px 7px 5px !important;
+}
+
+.card .card-header {
+    z-index: auto;
+}
+
+.table-projects td {
+    padding: 6px 10px !important;
+    vertical-align: middle;
+    height: 45px;
+}
+
+.breadcrumb-list {
+	text-align: left;
+    width: 250px;
+    background: transparent;
+    border: 1px solid #ccc;
+    outline: none;
+    height: 69px;
+    border-bottom: none;
+    border-top: none;
+    padding: 15px;
+}
+
+.process-status-list {
+	width: 250px;
+    background: white;
+    position: absolute;
+    border: 1px solid #ccc;
+    border-top: none;
+    padding: 5px 10px;
+    display: none;
+}
+
+.total-hours-status {
+	border-right: none; 
+	width: 100px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	font-family: sans-serif;
+}
+
+.task-comments {
+	/*background: #e0e0e08c;*/
+    /*padding: 15px;*/
+}
+
+tr.project-type-design td {
+    background: #bce8e975 !important;
+}
+tr.project-type-tech td {
+    background: #e2dbff !important;
+}
+tr.project-type-product td {
+    background: #ffd6fe78 !important;
+}
+tr.project-type-potential_lead td {
+    background: #fffae1 !important;
+}
+tr.project-type-web_hosting td {
+    background: #ffffff !important;
+}
+
+.project-star {
+	cursor: pointer;
+}
+
+.user-pic img {
+	float: left;
+    margin-right: 10px;
+}
+
+.user-comment div {
+	font-size: 12px;
+}
+
+.form-control {
+	-webkit-appearance: button;
+}
